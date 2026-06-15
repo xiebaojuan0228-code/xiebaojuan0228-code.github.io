@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>AI超级助手</title>
+<style>
+body{
+    font-family:微软雅黑;
+    background:#f5f7fb;
+    text-align:center;
+    margin:0;
+}
+
+header{
+    background:#4A90E2;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:800px;
+    margin:30px auto;
+    padding:20px;
+}
+
+textarea{
+    width:100%;
+    height:120px;
+    padding:10px;
+    font-size:16px;
+}
+
+button{
+    margin-top:15px;
+    padding:12px 25px;
+    font-size:16px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#reply{
+    margin-top:30px;
+    text-align:left;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🤖 AI超级助手</h1>
+    <p>聊天｜写文案｜做PPT大纲</p>
+</header>
+
+<div class="container">
+
+    <textarea id="message"
+    placeholder="例如：帮我写一篇卖水果的小红书文案"></textarea>
+
+    <br>
+
+    <button onclick="sendMessage()">
+        发送
+    </button>
+
+    <div id="reply">
+        AI回复会显示在这里……
+    </div>
+
+</div>
+
+<script>
+async function sendMessage(){
+    document.getElementById("reply").innerHTML="正在思考中……";
+
+    document.getElementById("reply").innerHTML=
+    "下一步我们会接入真正的DeepSeek，让这里变成真实AI回复。";
+}
+</script>
+
+</body>
+</html>
