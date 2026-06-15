@@ -98,7 +98,10 @@ async function sendMessage() {
 
         const data = await response.json();
 
-        reply.innerHTML = data.reply || "没有收到回复";
+        reply.innerHTML =
+  data.reply ||
+  data.error ||
+  JSON.stringify(data);
     } catch (error) {
         reply.innerHTML = "调用失败：" + error.message;
     }
